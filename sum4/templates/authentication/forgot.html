@@ -1,0 +1,34 @@
+{% extends "home.html" %} {% block content %}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 class="text-center"> I forgot my password</h4>
+        </div>
+    </div>
+</section>
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+            <div class="cod-lg-4">
+                <h4 class="text-center"> forgot password</h4>
+                <form action="method" id="post" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="subject" placeholder="Email Address">
+                        <div class="validate"></div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-block"> Forgot password</button>
+                    </div><br>
+                    <form action=""><small>Login to my account <a href="/authentication"> Click Here</a></small></form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock content %}

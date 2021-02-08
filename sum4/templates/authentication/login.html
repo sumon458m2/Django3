@@ -1,0 +1,46 @@
+{% extends "home.html" %} {% block content %}
+
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        6341 Chakkirti<br> Shibganj,ChapaiNawabganj<br> Bangladesh <br>
+                        <strong>Phone:</strong> +88 017xxxxxxxx<br>
+                        <strong>Email:</strong> sumonalis360@gmail.com<br>
+                    </p>
+
+                    <div>
+                        <h2>Login Your account</h2>
+                    </div>
+                    {% for message in messages %}
+                    <div class="alert{{message.tags}} alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                            <span aria-hidden="true"> &times;</span>
+                        </button> {{message}}
+                    </div>
+                    {% endfor %}
+
+                    <form action="" method="post" role="form">
+                        {% csrf_token %}
+                        <div>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="User name">
+                            <div class="validate"></div><br>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                            <div class="validate"></div>
+                        </div>
+                        <small> Forgot my <a href="forgot_password">Password!</a></small><br>
+                        <div class="text-center"><br>
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                        </div>
+                    </form><br>
+                    <small> Don,t have an account <a href="registration">Register Now!</a></small>
+                </div>
+            </div>
+</footer>
+
+{% endblock content %}

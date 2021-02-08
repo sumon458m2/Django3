@@ -1,0 +1,24 @@
+{% extends "home.html" %} {% block content %} {% load static %}
+<section id="clients">
+    <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+            <h3>Our Clients</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+            {% for clnt in client %}
+            <div>
+                <a href="{{clnt.image}}" target="_black">
+                    <div class="client-logo">
+                        <img src="{{clnt.image.url}}" class="img-fluid" alt=" ">
+                    </div>
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock content %}

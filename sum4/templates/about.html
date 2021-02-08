@@ -1,0 +1,58 @@
+{% extends "home.html" %} {% block content %}{% load static %}
+<!-- ======= About Us Section ======= -->
+<section id="about">
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </header>
+
+        <div class="row about-cols">
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{about.0.image.url}}" class="img-fluid" style="height:300px;width:300px;">
+                        <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                    </div>
+                    <h2>{{about.0.name}}</h2>
+                    <p>
+                        {{about.0.description}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{about.1.image.url}}" alt="" class="img-fluid" style="height:300px;width:300px;">
+                        <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                    </div>
+                    <h2>{{about.1.name}}</h2>
+                    <p>
+                        {{about.1.description}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{about.2.image.url}}" alt="" class="img-fluid" style="height:300px;width:300px;">
+                        <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                    </div>
+                    <h2>{{about.2.name}}</h2>
+                    <p>
+                        {{about.2.description}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End About Us Section -->
+
+{% endblock content %}
